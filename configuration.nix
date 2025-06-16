@@ -54,6 +54,8 @@
 
   environment.systemPackages = with pkgs; [
 	zfs
+    btrfs-progs
+    neofetch
 	neovim
 	git
 	plex
