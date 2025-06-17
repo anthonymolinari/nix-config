@@ -1,8 +1,8 @@
 { ... }: {
     imports = [ 
-        ./prowlarr 
-        ./radarr 
-        ./sonarr 
-        ./transmission 
+        ./prowlarr.nix
+        ./radarr.nix
+        ./sonarr.nix 
+        ./transmission.nix
     ];
 }

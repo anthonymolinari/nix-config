@@ -5,6 +5,6 @@
         enable = true;
         user = "transmission";
         group = "transmission";
-    }
+    };
 
 }

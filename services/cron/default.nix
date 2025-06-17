@@ -3,7 +3,9 @@
     services.cron = {
         enable = true;
         systemCronJobs = [
-            ""
+            ''
+            # back /var/lib/*
+            ''
         ];
     };
 }
