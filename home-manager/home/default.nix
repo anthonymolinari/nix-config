@@ -17,6 +17,9 @@ in
         };
 
         imports = [ ../modules ];
+        
+        # let home mananger install and manager itself
+        programs.home-manager.enable = true;
 
         home.stateVersion = "25.05";
     };
