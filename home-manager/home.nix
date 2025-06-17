@@ -27,6 +27,9 @@ in
 	  zsh
       gh
       lazygit
+      tmuxPlugins.sensible
+      tmuxPlugins.prefix-highlight
+      tmuxPlugins.mode-indicator
 	];
 
 	programs.zsh = {
@@ -96,7 +99,7 @@ in
         setw -g mode-keys vi
         bind -T copy-mode-vi v send -X begin-selection
         bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel
-        bind P past-buffer
+        bind P paste-buffer
         bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel
 
         # mouse mode
@@ -128,16 +131,22 @@ in
         set -g message-style fg='#8be9fd'
 
         set -g status-position bottom
-        set -g status-style bg=' '
-        set -g status-style fg=' '
+        set -g status-style bg='#1c1c1c'
+        set -g status-style fg='#ffaf00'
         set -g status-interval 1
 
         set -g window-status-current-format "#[fg=#ff87D7]#[bg=#bd93f9]#[fg=#2c2c2c]#[bg=#ffaf00] #I #W "
 
-        #set -g status-left ' #{tmux_mode_indicator}'
-        #set -g status-right-length 100
-        #set -g status-right ' '
-        #set -ga status-right ' '
+        set -g status-left '󱄅 #{tmux_mode_indicator}'
+        set -g status-right-length 100
+        set -g status-right ' '
+        set -ga status-right '#[fg=#2c2c2c,bg=#5fd7af] %m-%d %I:%M %p '
+
+        # plugins #
+        run-shell ${pkgs.tmuxPlugins.sensible}/share/tmux-plugins/sensible/sensible.tmux
+        run-shell ${pkgs.tmuxPlugins.prefix-highlight}/share/tmux-plugins/prefix-highlight/prefix-highlight.tmux
+        run-shell ${pkgs.tmuxPlugins.mode-indicator}/share/tmux-plugins/mode-indicator/mode-indicator.tmux
+
         
        '';
     };
