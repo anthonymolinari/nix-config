@@ -9,12 +9,20 @@ in
 {
     environment.systemPackages = with pkgs; [
         zfs
+        btrfs-progs
     ];
 
     # fast storage for services
-    filesSystems."/mnt/500GB-ssd" = {};
+    #filesSystems."/mnt/500GB-ssd" = {
+#        device = "/dev/disk/by-uuid/"
+#        fstype = "btrfs"
+#        };
 
     # large storage for media
-    filesSystems."/mnt/10TB-media" = {};
+    #filesSystems."/mnt/10TB-media" = {};
+#        device = "/dev/disk/by-uuid/"
+#        fstype = "zfs"
+#        };
+
 
 }
