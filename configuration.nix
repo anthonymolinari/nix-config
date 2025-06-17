@@ -7,6 +7,8 @@
       ./home-manager/home.nix
       ./system/network.nix
       ./services/plex.nix
+      ./services/servarr.nix
+      ./services/samba.nix
     ];
 
   # Bootloader.
@@ -14,7 +16,7 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "fragile"; # Define your hostname.
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";

@@ -2,26 +2,19 @@
 
    services.sonarr = {
        enable = true;
-       dataDir = "/var/lib/sonarr";
        openFirewall = true;
-       user = "servarr";
-       group = "servarr";
+       dataDir = "/var/lib/sonarr";
    };
 
    services.radarr = {
        enable = true;
-       dataDir = "/var/lib/radarr";
        openFirewall = true;
-       user = "servarr";
-       group = "servarr";
+       dataDir = "/var/lib/radarr";
    };
 
    services.prowlarr = {
        enable = true;
-       dataDir = "/var/lib/prowlarr";
        openFirewall = true;
-       user = "servarr";
-       group = "servarr";
    };
 
 }
