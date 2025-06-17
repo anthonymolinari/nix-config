@@ -16,20 +16,7 @@ in
             EDITOR = "nvim";
         };
 
-        home.packages = with pkgs; [ 
-            btop
-            wget
-        ];
-
-        imports = [
-            ./git
-            ./lazygit
-            ./neofetch
-            ./nvim
-            ./ranger
-            ./tmux
-            ./zsh
-        ];
+        imports = [ ../modules ];
 
         home.stateVersion = "25.05";
     };
