@@ -1,21 +1,27 @@
 { config, pkgs, ... }: {
 
-   services.sonarr = {
-       enable = true;
-       openFirewall = true;
-       dataDir = "/var/lib/sonarr";
-   };
+    environment.systemPackages = with pkgs; [
+        sonarr
+        radarr
+        prowlarr
+    ];  
 
-   services.radarr = {
-       enable = true;
-       openFirewall = true;
-       dataDir = "/var/lib/radarr";
-   };
+    services.sonarr = {
+        enable = true;
+        openFirewall = true;
+        dataDir = "/var/lib/sonarr";
+    };
 
-   services.prowlarr = {
-       enable = true;
-       openFirewall = true;
-   };
+    services.radarr = {
+        enable = true;
+        openFirewall = true;
+        dataDir = "/var/lib/radarr";
+    };
+
+    services.prowlarr = {
+        enable = true;
+        openFirewall = true;
+    };
 
 }
 

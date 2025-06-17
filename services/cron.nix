@@ -4,5 +4,6 @@
         enable = true;
         systemCronJobs = [
             ""
-        ]
-    }
+        ];
+    };
+}
