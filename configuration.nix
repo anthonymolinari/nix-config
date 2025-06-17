@@ -4,11 +4,9 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ./home-manager/home.nix
-      ./system/network.nix
-      ./services/plex.nix
-      ./services/servarr.nix
-      ./services/samba.nix
+      ./home-manager
+      ./system
+      ./services
     ];
 
   # Bootloader.
@@ -55,17 +53,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-	zfs
-    btrfs-progs
-    neofetch
-	neovim
-	git
-	plex
 	openvpn3
-	sonarr
-	radarr
-	prowlarr
-	exportarr
   ];
 
   programs.zsh.enable = true;
