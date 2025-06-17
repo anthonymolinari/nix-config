@@ -1,7 +1,8 @@
 { config, pkgs, ...}: {
 
-    networking.networkmanager.enable = false;
+    networking.hostName = "fragile"; # Define your hostname.
 
+    networking.networkmanager.enable = false;
 
     networking = {
         enableIPv6 = false;
