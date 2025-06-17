@@ -10,36 +10,27 @@ in
 
     home-manager.users.anthony = { config, pkgs, ... }: {
 
-	home.username = "anthony";
-	home.homeDirectory = "/home/anthony";
-	home.sessionVariables = {
-	    EDITOR = "nvim";
-	};
+        home.username = "anthony";
+        home.homeDirectory = "/home/anthony";
+        home.sessionVariables = {
+            EDITOR = "nvim";
+        };
 
-    home.packages = with pkgs; [ 
-      btop
-	  neovim
-	  tmux
-	  neofetch
-	  ranger
-	  wget
-	  git
-	  neofetch
-	  zsh
-      gh
-      lazygit
-      tmuxPlugins.sensible
-      tmuxPlugins.prefix-highlight
-      tmuxPlugins.mode-indicator
-	];
+        home.packages = with pkgs; [ 
+            btop
+            wget
+        ];
 
-    imports = [
-        ./git
-        ./neofetch
-        ./tmux
-        ./zsh
-    ];
+        imports = [
+            ./git
+            ./lazygit
+            ./neofetch
+            ./nvim
+            ./ranger
+            ./tmux
+            ./zsh
+        ];
 
-    home.stateVersion = "25.05";
+        home.stateVersion = "25.05";
     };
 }
