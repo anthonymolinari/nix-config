@@ -1,5 +1,5 @@
 { config, pkgs, ... } : {
-    environment.systemPackages = with pkgs; [ transmission ];
+    environment.systemPackages = with pkgs; [ transmission_4 ];
 
     services.transmission = {
         enable = true;
