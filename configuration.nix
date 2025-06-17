@@ -1,6 +1,5 @@
-{ config, pkgs, ... }:
+{ config, pkgs, ... }: {
 
-{
   imports =
     [ 
       ./hardware-configuration.nix
@@ -52,8 +51,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
-	openvpn3
+  environment.systemPackages = with pkgs; [ 
+    wget 
   ];
 
   programs.zsh.enable = true;
