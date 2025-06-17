@@ -4,4 +4,6 @@
         btop
     ];
 
+    # programs.btop.enable = true;
+    
 }
