@@ -1,6 +1,6 @@
-{ config, pkgs, ...}: {
+{ ...}: {
 
-    networking.hostName = "fragile"; # Define your hostname.
+    networking.hostName = "milan"; # Define your hostname.
 
     networking.networkmanager.enable = false;
 
@@ -22,5 +22,4 @@
             allowedTCPPorts = [ 22 80 443 32400 ];
         };
     };
-
 }
