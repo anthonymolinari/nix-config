@@ -19,7 +19,6 @@ in
 
         # import packages & configs managed by home-manager
         imports = [
-            ./
 
         ];
 
