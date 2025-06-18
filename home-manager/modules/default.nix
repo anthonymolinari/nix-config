@@ -2,6 +2,7 @@
 
     imports = [
         ./btop
+        ./fzf
         ./git
         ./lazygit
         ./neofetch

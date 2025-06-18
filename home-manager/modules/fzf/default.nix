@@ -1,9 +1,10 @@
 { pkgs, ... }: {
+
     home.packages = with pkgs; [
-        lazygit
+        fzf
     ];
 
-    programs.lazygit = {
+    programs.fzf = {
         enable = true;
     };
 }

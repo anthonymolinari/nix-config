@@ -1,20 +1,22 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
 
     home.packages = with pkgs; [
         git 
         gh
     ];
 
-	programs.git = {
-	    enable = true;
-	    userName = "anthonymolinari";
-	    userEmail = "amolinari017@gmail.com";
-	};
+    programs = {
+        git = {
+            enable = true;
+            userName = "anthonymolinari";
+            userEmail = "amolinari017@gmail.com";
+        };
+        gh = {
+            enable = true;
+            gitCredentialHelper = {
+                enable = true;
+            };
+        };
+    };
 
-	programs.gh = {
-	   enable = true;
-	   gitCredentialHelper = {
-	       enable = true;
-	   };
-	};
 }
