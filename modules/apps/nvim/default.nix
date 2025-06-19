@@ -8,8 +8,5 @@
         javascript-typescript-langserver
         pyright
         gopls
-        nodejs_24
-        python310
-        go 
     ];
 }

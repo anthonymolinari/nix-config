@@ -12,7 +12,7 @@
         ./keyboard.nix
         ./network.nix
         ./storage.nix
-        ./harware-configuration.nix
+        ./hardware-configuration.nix
     ];
 
     # enable programs & services

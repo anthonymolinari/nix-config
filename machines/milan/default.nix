@@ -1,4 +1,4 @@
-{ ... }: {
+{ config, pkgs, ... }: {
 
     # the main nix config for milan 
     networking.hostName = "milan";
