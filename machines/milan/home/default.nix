@@ -9,7 +9,7 @@ in
         (import "${home-manager}/nixos") 
     ];
 
-    home-manager.users.anthony = { config, pkgs, ... }: {
+    home-manager.users.anthony = { ... }: {
 
         home.username = "anthony";
         home.homeDirectory = "/home/anthony";
