@@ -1,17 +1,17 @@
 { ... }: {
 
     # the main nix config for genoa 
- 
-    # enable flakes
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    networking.hostName = "genoa"; # Define your hostname.
 
-    # import modules, desktop environment, services, etc.
+    # import containerized services
     imports = [
-
+        ../_common
+        ../../modules/services/podman
+        ../../modules/containers/booklore
+        ../../modules/containers/duckdns
+        ../../modules/containers/frigate
+        ../../modules/containers/home-assistant
+        ../../modules/containers/omada-controller
+        ../../modules/containers/openboks
     ];
-
-
-    system.stateVersion = "25.05"; 
-
-
 }
