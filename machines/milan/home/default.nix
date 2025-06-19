@@ -28,6 +28,7 @@ in
             ../../../modules/apps/ranger
             ../../../modules/apps/tmux
             ../../../modules/apps/zsh
+            ../../../dev
         ];
 
         # let home mananger install and manager itself
