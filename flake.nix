@@ -9,7 +9,7 @@
         };
     };
 
-    outputs = { self, nixpkgs, ... }: {
+    outputs = { nixpkgs, ... }: {
         nixosConfigurations = {
             milan = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
