@@ -7,7 +7,9 @@
 
     # import modules, desktop environment, services, etc.
     imports = [
-
+        ./_common
+        ./system
+        ./home
     ];
 
 
