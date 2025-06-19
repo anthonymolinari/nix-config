@@ -2,32 +2,35 @@
     description = "nix-configurations";
 
     inputs = {
-        #flake-utils.url = "github:numtide/flake-utils";
-        #nixpkgs.url = "github:nixos/nixos-25.05";
-        #home-manager = {
-        #   url = "github:nix-community/home-manager/release-25.05";
-        #   inputs.nixpkgs.follows = "nixpkgs";
-        #};
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+        home-manager = {
+           url = "github:nix-community/home-manager/release-25.05";
+           inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = { ... }: {
+    outputs = { self, nixpkgs, ... }: {
         nixosConfigurations = {
-            milan = {
+            milan = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
                 modules = [
                     ./machines/milan
                 ];
             };
-            genoa = {
+            genoa = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
                 modules = [
                     ./machines/genoa
                 ];
             };
-            naples = {
+            naples = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
                 modules = [
                     ./machines/naples
                 ];
             };
-            bari = {
+            bari = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
                 modules = [
                     ./machines/bari
                 ];
