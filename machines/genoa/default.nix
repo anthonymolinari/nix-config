@@ -13,5 +13,6 @@
         ../../modules/containers/home-assistant
         ../../modules/containers/omada-controller
         ../../modules/containers/openboks
+        ./system
     ];
 }
