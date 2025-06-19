@@ -1,15 +1,13 @@
 { ... }: {
 
     # the main nix config for milan 
-   
-    # enable flakes
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    networking.hostName = "milan";
 
     # import modules, desktop environment, services, etc.
     imports = [
-        ../../services
+        ../_common
+        ../../modules/services/plex
+        ../../modules/services/samba
+        ../../modules/services/servarr
     ];
-
-
-    system.stateVersion = "25.05"; 
 }
