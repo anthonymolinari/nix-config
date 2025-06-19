@@ -1,4 +1,4 @@
-{ ... }: 
+{ pkgs, ... }: 
 
 let
   home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
@@ -32,9 +32,23 @@ in
             ../../../modules/desktop/gnome
         ];
 
+        dconf = {
+            enable = true;
+            settings = {
+                "org/gnome/desktop/interface" = {
+                    color-scheme = "prefer-dark";
+                    accent-color = "teal";
+                };
+            };
+        };
+        
+        # additional packages w/ config 
+        home.packages = with pkgs; [
+            firefox    
+        ];
+
         # let home mananger install and manager itself
         programs.home-manager.enable = true;
-
         home.stateVersion = "25.05";
     };
 }

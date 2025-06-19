@@ -5,8 +5,9 @@
  
     # import modules, desktop environment, services, etc.
     imports = [
-        ./system
-        ./home
         ../_common
+        ./system
+        ../../modules/desktops/gnome
+        ./home
     ];
 }
