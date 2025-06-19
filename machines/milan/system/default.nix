@@ -1,4 +1,4 @@
-{ config, pkgs, ...} : {
+{ pkgs, ...} : {
 
     # Set your time zone.
     time.timeZone = "America/Los_Angeles";
@@ -12,6 +12,7 @@
         ./keyboard.nix
         ./network.nix
         ./storage.nix
+        ./harware-configuration.nix
     ];
 
     # enable programs & services

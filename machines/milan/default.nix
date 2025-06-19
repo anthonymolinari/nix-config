@@ -5,6 +5,7 @@
 
     # import modules, desktop environment, services, etc.
     imports = [
+        ./system
         ./home # home-manager config
         ../_common
         ../../modules/services/plex
