@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
 
     # the main nix config for bari
     networking.hostName = "bari"; # Define your hostname.
