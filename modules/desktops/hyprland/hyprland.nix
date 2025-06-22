@@ -5,7 +5,7 @@
     wayland.windowManager.hyprland = {
         enable = true;
         settings = {
-            monitor = "";
+            monitor = "eDP-1, 1920x1080@60, 0x0, 1.0";
             "$mod" = "SUPER";
             exec-once="waybar"; # start status bar
             bindel = [
@@ -24,7 +24,7 @@
                 "$mod, F, fullscreen,"
                 "$mod, E, exec, dolphon"
                 "$mod, G, exec, firefox"
-                "$mod, D, exec, rofi -dow drun"
+                "$mod, D, exec, rofi -show drun"
                 "SUPER SHIFT, H, movewindow, l"
                 "SUPER SHIFT, L, movewindow, r"
                 "SUPER SHIFT, K, movewindow, u"
@@ -39,11 +39,11 @@
                     let ws = i + 1;
                     in [
                         "$mod, code:1${toString i}, workspace, ${toString ws}"
-                        "$mod, SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+	                    "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
                     ]
                 )
                 9)
-                );
+            );
         };
     };
 

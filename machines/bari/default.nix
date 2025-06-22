@@ -8,7 +8,7 @@
 
     # import modules, desktop environment, services, etc.
     imports = [
-        ./_common
+        ../_common
         ./system
         ./home
     ];
@@ -19,6 +19,8 @@
         where-is-my-sddm-theme
         catppuccin-sddm
     ];
+
+
 
     hardware.bluetooth.enable = true;
     services.blueman.enable = true;

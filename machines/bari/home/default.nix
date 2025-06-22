@@ -32,6 +32,12 @@ in
             ../../../modules/apps/tmux
             ../../../modules/apps/zsh
         ];
+        
+
+        home.packages = with pkgs; [
+            firefox
+            spotify
+        ];
 
         # let home mananger install and manager itself
         programs.home-manager.enable = true;

@@ -1,6 +1,7 @@
 { pkgs, ... }: 
 
 {
+    home-manager.useGlobalPkgs = true;
 
     # enable flakes
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -20,6 +21,7 @@
     environment.systemPackages = with pkgs; [
         just
         wget
+        direnv
     ];
 
     system.stateVersion = "25.05"; 
