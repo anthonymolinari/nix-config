@@ -1,7 +1,8 @@
 { ... }: {
 
     # the main nix config for bari
- 
+    networking.hostName = "bari"; # Define your hostname.
+
     # enable flakes
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -12,7 +13,31 @@
         ./home
     ];
 
+    networking.networkmanager.enable = true;
 
-    system.stateVersion = "25.05"; 
+    environment.systemPackages = with pkgs; [
+        where-is-my-sddm-theme
+        catppuccin-sddm
+    ];
 
+    hardware.bluetooth.enable = true;
+    services.blueman.enable = true;
+
+    programs.zsh.enable = true;
+
+    programs.hyprland.enable = true;
+    services.xserver.enable = true;
+    services.xserver.displayManager = {
+        sddm.enable = true;
+        sddm.wayland.enable = true;
+        sddm.theme = "catppuccin-mocha";
+    };
+
+    security.rtkit.enable = true;
+    services.pipewire = {
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
+    };
 }

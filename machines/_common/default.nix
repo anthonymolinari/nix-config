@@ -5,6 +5,10 @@
     # enable flakes
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+    time.timeZone = "America/Los_Angeles";
+
+    nixpkgs.config.allowUnfree = true;
+
     # set splash screen
     #boot.loader.grub.splashImage = ./nix_splash.png;
 
