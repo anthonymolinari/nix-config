@@ -12,11 +12,11 @@
         oh-my-zsh = {
             enable = true;
             plugins = [ "git" ];
-            theme = "";
+            theme = "gallifrey";
         };
         shellAliases = {
- #           update = "sudo nixos-rebuild switch --flake .#${host} --impure";
             edit = "nvim /etc/nixos/";
+            cnvim = "nvim .config/nvim/";
         };
 
         history = {
