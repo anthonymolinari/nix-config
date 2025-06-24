@@ -20,7 +20,7 @@
         gnome-characters
         gnome-music
         gnome-photos
-        gnome-terminal
+#        gnome-terminal
         gnome-tour
         hitori
         iagno

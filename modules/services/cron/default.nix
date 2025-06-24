@@ -1,10 +1,15 @@
-{ config, pkgs, ... }: {
-
+{ ... }: {
     services.cron = {
         enable = true;
         systemCronJobs = [
             ''
-            # back /var/lib/*
+            # backup services
+            ''
+            ''
+            # clean up old builds
+            ''
+            ''
+            # purge unused docker images 
             ''
         ];
     };

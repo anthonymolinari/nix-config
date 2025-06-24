@@ -27,6 +27,7 @@ in
             ../../../modules/apps/nvim
             ../../../modules/apps/ranger
             ../../../modules/apps/tmux
+            ../../../modules/apps/yazi
             ../../../modules/apps/zsh
             ../../../dev
         ];
