@@ -25,7 +25,6 @@ in
             ../../../modules/apps/lazygit
             ../../../modules/apps/neofetch
             ../../../modules/apps/nvim
-            ../../../modules/apps/ranger
             ../../../modules/apps/tmux
             ../../../modules/apps/yazi
             ../../../modules/apps/zsh
