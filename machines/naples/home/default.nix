@@ -30,8 +30,6 @@ in
             ../../../modules/apps/yazi
             ../../../modules/apps/tmux
             ../../../modules/apps/zsh
-            ../../../dev
-            ../../../modules/desktop/gnome
         ];
 
         dconf = {
