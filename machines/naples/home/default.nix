@@ -22,10 +22,12 @@ in
             ../../../modules/apps/btop
             ../../../modules/apps/fzf
             ../../../modules/apps/git
+            ../../../modules/apps/kitty
             ../../../modules/apps/lazygit
             ../../../modules/apps/neofetch
             ../../../modules/apps/nvim
             ../../../modules/apps/ranger
+            ../../../modules/apps/yazi
             ../../../modules/apps/tmux
             ../../../modules/apps/zsh
             ../../../dev
@@ -45,6 +47,7 @@ in
         # additional packages w/ config 
         home.packages = with pkgs; [
             firefox    
+            steam
         ];
 
         # let home mananger install and manager itself
