@@ -1,5 +1,5 @@
 {
-    description = "go development env";
+    description = "node development env";
     inputs.nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
     
     outputs = { self, nixpkgs }:
@@ -9,7 +9,7 @@
         in {
             devShells.x86_64-linux.default = pkgs.mkShell {
                 buildInputs = with pkgs; [
-                    go
+                    nodejs_24
                 ];
                 shellHook = ''
                     echo "started dotnet devshell"

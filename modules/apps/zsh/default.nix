@@ -17,6 +17,7 @@
         shellAliases = {
             edit = "nvim /etc/nixos/";
             cnvim = "nvim .config/nvim/";
+            dev-shell = "bash /etc/nixos/scripts/shell/setup-shell.sh";
         };
 
         history = {
