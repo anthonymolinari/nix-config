@@ -18,7 +18,6 @@
             ../../../modules/apps/tmux
             ../../../modules/apps/yazi
             ../../../modules/apps/zsh
-            ../../../dev
         ];
 
         # let home mananger install and manager itself
