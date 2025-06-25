@@ -20,19 +20,18 @@
         catppuccin-sddm
     ];
 
-
-
     hardware.bluetooth.enable = true;
     services.blueman.enable = true;
 
     programs.zsh.enable = true;
 
     programs.hyprland.enable = true;
-    services.xserver.enable = true;
-    services.xserver.displayManager = {
-        sddm.enable = true;
-        sddm.wayland.enable = true;
-        sddm.theme = "catppuccin-mocha";
+
+    services.displayManager.sddm = {
+        wayland.enable = true;
+        enable = true;
+        theme = "catppuccin-mocha";
+        package = pkgs.kdePackages.sddm;
     };
 
     security.rtkit.enable = true;

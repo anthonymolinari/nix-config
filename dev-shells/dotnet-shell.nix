@@ -10,6 +10,7 @@
             devShells.x86_64-linux.default = pkgs.mkShell {
                 buildInputs = with pkgs; [
                     dotnetCorePackges.sdk_9_0_3xx
+                    nodejs_24
                 ];
                 shellHook = ''
                     echo "started dotnet devshell"
