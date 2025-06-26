@@ -34,6 +34,7 @@
                 "$mod, RETURN, exec, kitty"
                 "SUPER SHIFT, Q, killactive,"
                 "SUPER SHIFT, E, exit,"
+                "SUPER SHIFT, P, rofi -show power-menu -modi power-menu:rofi-power-menu"
                 "$mod, F, fullscreen,"
                 "$mod, E, exec, dolphon"
                 "$mod, G, exec, firefox"
