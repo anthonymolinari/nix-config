@@ -20,6 +20,7 @@
             ../../../modules/apps/ranger
             ../../../modules/apps/rofi
             ../../../modules/apps/tmux
+            ../../../modules/apps/yazi
             ../../../modules/apps/zsh
         ];
         
