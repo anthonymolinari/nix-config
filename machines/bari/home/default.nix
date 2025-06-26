@@ -1,4 +1,4 @@
-{... }: {
+{ ... }: {
     home-manager.users.anthony = { pkgs, ... }: {
 
         home.username = "anthony";
@@ -29,6 +29,8 @@
             firefox
             spotify
         ];
+
+        catppuccin.flavor = "mocha";
 
         # let home mananger install and manager itself
         programs.home-manager.enable = true;

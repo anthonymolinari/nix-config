@@ -109,6 +109,8 @@
         };
     };
 
+    catppuccin.hyprland.enable = true;
+
     services.hyprpaper = {
         enable = true;
         settings = {

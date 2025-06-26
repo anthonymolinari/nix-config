@@ -91,4 +91,6 @@
             };
         }];        
     };
+
+    catppuccin.waybar.enable = true;
 }
