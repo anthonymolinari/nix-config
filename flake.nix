@@ -24,7 +24,6 @@
                         ];
                     }
                     inputs.catppuccin.nixosModules.catppuccin
-                    inputs.stylix.nixosModules.stylix
                     ./machines/milan
                 ];
             };
