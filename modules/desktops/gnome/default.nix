@@ -10,6 +10,7 @@
         gnomeExtensions.just-perfection
         gnomeExtensions.arc-menu
         gnomeExtensions.appindicator
+        gnomeExtensions.dash-to-dock
     ];
 
     services.udev.packages = [
