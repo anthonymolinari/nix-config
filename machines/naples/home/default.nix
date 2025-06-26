@@ -30,7 +30,7 @@
                     accent-color = "teal";
                 };
                 "org/gnome/desktop/applications/terminal" = {
-                    exec = "kitty"
+                    exec = "kitty";
                 };
             };
         };
