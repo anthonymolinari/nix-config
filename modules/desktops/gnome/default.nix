@@ -9,6 +9,12 @@
         gnomeExtensions.blur-my-shell
         gnomeExtensions.just-perfection
         gnomeExtensions.arc-menu
+        gnomeExtensions.appindicator
+        gnomeExtensions.dash-to-dock
+    ];
+
+    services.udev.packages = [
+        pkgs.gnome-settings-daemon
     ];
 
     environment.gnome.excludePackages = ( with pkgs; [
@@ -20,7 +26,7 @@
         gnome-characters
         gnome-music
         gnome-photos
-#        gnome-terminal
+        gnome-terminal
         gnome-tour
         hitori
         iagno

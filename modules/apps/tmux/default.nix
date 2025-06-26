@@ -66,26 +66,11 @@
         set -g bell-action none
 
         set -g @catppuccin_flavor 'mocha' # latte, frappe, macchiatto or mocha
-
         set -g @catppuccin_window_status_style "rounded"
+        set -g status-right-length 100
+        set -g status-left-length 100
+        set -g status-left '󱄅 #{tmux_mode_indicator}'
 
-#       set -g pane-border-style fg='#ffaf00'
-#       set -g pane-active-border-style fg='#ffaf00'
-
-#       set -g message-style bg='#44475a'
-#       set -g message-style fg='#8be9fd'
-
-#       set -g status-position bottom
-#       set -g status-style bg='#1c1c1c'
-#       set -g status-style fg='#ffaf00'
-#       set -g status-interval 1
-
-#       set -g window-status-current-format "#[fg=#ff87D7]#[bg=#bd93f9]#[fg=#2c2c2c]#[bg=#ffaf00] #I #W "
-
-#       set -g status-left '󱄅 #{tmux_mode_indicator}'
-#       set -g status-right-length 100
-#       set -g status-right ' '
-#       set -ga status-right '#[fg=#2c2c2c,bg=#5fd7af] %m-%d %I:%M %p '
 
         # plugins #
         run-shell ${pkgs.tmuxPlugins.sensible}/share/tmux-plugins/sensible/sensible.tmux

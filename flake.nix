@@ -8,6 +8,7 @@
            inputs.nixpkgs.follows = "nixpkgs";
         };
         hyprdock.url = "github:Xetibo/hyprdock";
+        catppuccin.url = "github:catppuccin/nix";
     };
 
     outputs = { nixpkgs, ... }@ inputs: {
@@ -18,7 +19,12 @@
                     inputs.home-manager.nixosModules.home-manager
                     {
                         home-manager.extraSpecialArgs = { inherit inputs; };
+                        home-manager.users.anthony.imports = [
+                            inputs.catppuccin.homeModules.catppuccin
+                        ];
                     }
+                    inputs.catppuccin.nixosModules.catppuccin
+                    inputs.stylix.nixosModules.stylix
                     ./machines/milan
                 ];
             };
@@ -28,7 +34,11 @@
                     inputs.home-manager.nixosModules.home-manager
                     {
                         home-manager.extraSpecialArgs = { inherit inputs; };
+                        home-manager.users.anthony.imports = [
+                            inputs.catppuccin.homeModules.catppuccin
+                        ];
                     }
+                    inputs.catppuccin.nixosModules.catppuccin
                     ./machines/genoa
                 ];
             };
@@ -38,7 +48,11 @@
                     inputs.home-manager.nixosModules.home-manager
                     {
                         home-manager.extraSpecialArgs = { inherit inputs; };
+                        home-manager.users.anthony.imports = [
+                            inputs.catppuccin.homeModules.catppuccin
+                        ];
                     }
+                    inputs.catppuccin.nixosModules.catppuccin
                     ./machines/naples
                 ];
             };
@@ -48,7 +62,11 @@
                     inputs.home-manager.nixosModules.home-manager
                     {
                         home-manager.extraSpecialArgs = { inherit inputs; };
+                        home-manager.users.anthony.imports = [
+                            inputs.catppuccin.homeModules.catppuccin
+                        ];
                     }
+                    inputs.catppuccin.nixosModules.catppuccin
                     ./machines/bari
                 ];
             };

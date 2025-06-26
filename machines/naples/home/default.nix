@@ -29,6 +29,9 @@
                     color-scheme = "prefer-dark";
                     accent-color = "teal";
                 };
+                "org/gnome/desktop/applications/terminal" = {
+                    exec = "kitty";
+                };
             };
         };
         
@@ -36,6 +39,7 @@
         home.packages = with pkgs; [
             firefox    
             steam
+            spotify
         ];
 
         # let home mananger install and manager itself
