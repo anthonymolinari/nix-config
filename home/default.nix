@@ -1,8 +1,6 @@
 # shared home manager config - extended by machines/<host>/home
 { ... }: {
 
-    home-manager.users.anthony = { ... }: {
-
         home.username = "anthony";
         home.homeDirectory = "/home/anthony";
         home.sessionVariables = {
@@ -27,5 +25,4 @@
         programs.home-manager.enable = true;
 
         home.stateVersion = "25.05";
-    };
 }

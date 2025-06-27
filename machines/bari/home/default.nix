@@ -1,5 +1,4 @@
-{ ... }: {
-    home-manager.users.anthony = { pkgs, ... }: {
+{ pkgs, ... }: {
 
         # import host specific packages & configs 
         imports = [
@@ -12,5 +11,4 @@
         ];
 
         catppuccin.flavor = "mocha";
-    };
 }
