@@ -52,7 +52,7 @@
                         home-manager.users.anthony.imports = [
                             inputs.catppuccin.homeModules.catppuccin
                             ./home
-                            ./machines/naples/home
+                            ./machines/naples/dconf
                         ];
                     }
                     inputs.catppuccin.nixosModules.catppuccin
@@ -69,6 +69,7 @@
                         home-manager.users.anthony.imports = [
                             inputs.catppuccin.homeModules.catppuccin
                             ./home
+                            ./modules/desktops/hyprland
                             ./machines/bari/home
                         ];
                     }
