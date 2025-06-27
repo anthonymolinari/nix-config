@@ -21,6 +21,7 @@
                         home-manager.extraSpecialArgs = { inherit inputs; };
                         home-manager.users.anthony.imports = [
                             inputs.catppuccin.homeModules.catppuccin
+                            ./home
                         ];
                     }
                     inputs.catppuccin.nixosModules.catppuccin
@@ -35,6 +36,7 @@
                         home-manager.extraSpecialArgs = { inherit inputs; };
                         home-manager.users.anthony.imports = [
                             inputs.catppuccin.homeModules.catppuccin
+                            ./home
                         ];
                     }
                     inputs.catppuccin.nixosModules.catppuccin
@@ -50,7 +52,7 @@
                         home-manager.users.anthony.imports = [
                             inputs.catppuccin.homeModules.catppuccin
                             ./home
-                            ./machines/bari/home
+                            ./machines/naples/home
                         ];
                     }
                     inputs.catppuccin.nixosModules.catppuccin

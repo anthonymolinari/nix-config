@@ -10,5 +10,4 @@
             spotify
         ];
 
-        catppuccin.flavor = "mocha";
 }
