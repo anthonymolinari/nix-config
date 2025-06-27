@@ -7,7 +7,5 @@
     imports = [
         ../_common
         ./system
-        ../../modules/desktops/gnome
-        ./home
     ];
 }
