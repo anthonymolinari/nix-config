@@ -8,18 +8,18 @@
         };
 
         imports = [
-            ../../../modules/apps/btop
-            ../../../modules/apps/fzf
-            ../../../modules/apps/git
-            ../../../modules/apps/kitty
-            ../../../modules/apps/lazygit
-            ../../../modules/apps/neofetch
-            ../../../modules/apps/nvim
-            ../../../modules/apps/ranger
-            ../../../modules/apps/rofi
-            ../../../modules/apps/tmux
-            ../../../modules/apps/yazi
-            ../../../modules/apps/zsh
+            ./apps/btop
+            ./apps/fzf
+            ./apps/git
+            ./apps/kitty
+            ./apps/lazygit
+            ./apps/neofetch
+            ./apps/nvim
+            ./apps/ranger
+            ./apps/rofi
+            ./apps/tmux
+            ./apps/yazi
+            ./apps/zsh
         ];
  
         programs.home-manager.enable = true;
