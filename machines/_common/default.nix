@@ -23,6 +23,7 @@
         wget
         direnv
     ];
+    programs.direnv.enable = true;
 
     system.stateVersion = "25.05"; 
 }
