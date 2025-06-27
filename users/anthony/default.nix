@@ -9,4 +9,10 @@
         ];
         shell = pkgs.zsh;
     };
+
+    # passwordless sudo
+    security.sudo.extraRules = [{
+        users = [ "anthony" ];
+        commands = [ { command = "ALL"; options = [ "NOPASSWD" ]; } ];
+    }];
 }
