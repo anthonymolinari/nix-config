@@ -21,6 +21,7 @@
                         home-manager.extraSpecialArgs = { inherit inputs; };
                         home-manager.users.anthony.imports = [
                             inputs.catppuccin.homeModules.catppuccin
+                            ./home
                         ];
                     }
                     inputs.catppuccin.nixosModules.catppuccin
@@ -35,6 +36,7 @@
                         home-manager.extraSpecialArgs = { inherit inputs; };
                         home-manager.users.anthony.imports = [
                             inputs.catppuccin.homeModules.catppuccin
+                            ./home
                         ];
                     }
                     inputs.catppuccin.nixosModules.catppuccin
@@ -49,10 +51,13 @@
                         home-manager.extraSpecialArgs = { inherit inputs; };
                         home-manager.users.anthony.imports = [
                             inputs.catppuccin.homeModules.catppuccin
+                            ./home
+                            ./machines/naples/dconf
                         ];
                     }
                     inputs.catppuccin.nixosModules.catppuccin
                     ./machines/naples
+                    ./modules/desktops/gnome
                 ];
             };
             bari = nixpkgs.lib.nixosSystem {
@@ -63,6 +68,9 @@
                         home-manager.extraSpecialArgs = { inherit inputs; };
                         home-manager.users.anthony.imports = [
                             inputs.catppuccin.homeModules.catppuccin
+                            ./home
+                            ./modules/desktops/hyprland
+                            ./machines/bari/home
                         ];
                     }
                     inputs.catppuccin.nixosModules.catppuccin

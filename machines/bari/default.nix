@@ -10,13 +10,11 @@
     imports = [
         ../_common
         ./system
-        ./home
     ];
 
     networking.networkmanager.enable = true;
 
     environment.systemPackages = with pkgs; [
-        where-is-my-sddm-theme
         catppuccin-sddm
     ];
 

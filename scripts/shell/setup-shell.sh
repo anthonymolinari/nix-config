@@ -11,18 +11,23 @@ echo "copying $1 dev shell to $workdir..."
 case $1 in 
     dotnet)
         cp "$dev_shells/dotnet-shell.nix" "$workdir/flake.nix"
+        echo "nix develop" >> "$workdir/.envrc"
         ;;
     python)
         cp "$dev_shells/python-shell.nix" "$workdir/flake.nix"
+        echo "nix develop" >> "$workdir/.envrc"
         ;;
     node)
         cp "$dev_shells/node-shell.nix" "$workdir/flake.nix"
+        echo "nix develop" >> "$workdir/.envrc"
         ;;
     go)
         cp "$dev_shells/go-shell.nix" "$workdir/flake.nix"
+        echo "nix develop" >> "$workdir/.envrc"
         ;;
     dart)
         cp "$dev_shells/dart-shell.nix" "$workdir/flake.nix"
+        echo "nix develop" >> "$workdir/.envrc"
         ;;
 esac
 
