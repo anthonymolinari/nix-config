@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
 
     home.packages = with pkgs; [ waybar ];
 
@@ -28,13 +28,23 @@
                 "network"
                 "custom/divider"
                 "battery"
+                "custom/endright"
             ];
             "hyprland/window" = { format = "{}"; };
             "wlr/workspaces" = {
                 on-scroll-up = "hyprctl dispatch workspace e+1";
                 on-scroll-down = "hyprctl dispatch workspace e-1";
             };
-            battery = { format = "󰁹 : {}%"; };
+            battery = { 
+                format = "󰁹 : {}%"; 
+                states = {
+                    warning = 20;
+                    critical = 10;
+                };
+                format-charging= "󰂄 : {}%";
+                format-plugged = "󰂄 : {}%";
+                format-alt = "{icon}";
+            };
             backlight = {
                 format = "󰃞  : {}";
                 device = "acpi_video0";
@@ -65,8 +75,8 @@
                 scroll-step = 5;
             };
             tray = {
-                icon-size = 13;
-                tooltip = false;
+                icon-size = 21;
+                tooltip = true;
                 spacing = 10;
             };
             network = {
@@ -85,12 +95,12 @@
                 tooltip = false;
             };
             "custom/endright" = {
-                format = "_";
+                format = "  ";
                 interval = "once";
                 tooltip = false;
             };
         }];        
     };
-
+    
     catppuccin.waybar.enable = true;
 }
