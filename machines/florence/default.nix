@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
-    # the main nix config for bari
-    networking.hostName = "bari"; # Define your hostname.
+    # the main nix config for florence
+    networking.hostName = "florence"; # Define your hostname.
 
     # enable flakes
     nix.settings.experimental-features = [ "nix-command" "flakes" ];

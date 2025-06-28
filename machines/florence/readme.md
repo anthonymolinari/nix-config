@@ -1,4 +1,4 @@
-# BARI - Laptop 
+# FLORENCE - Laptop 
 
 # Disk configuration
 
